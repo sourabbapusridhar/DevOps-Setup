@@ -27,5 +27,5 @@
 ## Add a `README.md` file with a build status icon
 *To be added*
 
-## Acknowledgment
-*To be added*
+## Acknowledgments
+The instructions documented here are based on my experience following the ["Hello World" with Travis CI tutorial](https://github.com/softwaresaved/build_and_test_examples/blob/master/travis/HelloWorld.md). Therefore, all the instructions mentioned here based on the above tutorial.
