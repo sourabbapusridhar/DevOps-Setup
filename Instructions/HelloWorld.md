@@ -28,4 +28,4 @@
 *To be added*
 
 ## Acknowledgments
-The instructions documented here are based on my experience following the ["Hello World" with Travis CI tutorial](https://github.com/softwaresaved/build_and_test_examples/blob/master/travis/HelloWorld.md). Therefore, all the instructions mentioned here based on the above tutorial.
+Thie instructions in this document are modified from ["Hello World" with Travis CI tutorial](https://github.com/softwaresaved/build_and_test_examples/blob/master/travis/HelloWorld.md). 
