@@ -1,7 +1,7 @@
 # Instructions to set up Travis CI for a simple "Hello World" program
 
 ## Sign in to GitHub
-*To be added*
+
 
 ## Create a new repository
 *To be added*
