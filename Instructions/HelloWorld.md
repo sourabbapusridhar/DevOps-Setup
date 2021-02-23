@@ -25,7 +25,9 @@ In the above text, replace `USERNAME` with your GitHub user name.
 ## Create a "Hello World" program
 * Create a short Python script named `hello.py` in your repository with the following content:
 
-`print("Hello World!")`
+```
+print("Hello World!")
+```
 
 * Test the script by running it once locally using command prompt:
 
