@@ -1,0 +1,9 @@
+# Ignore Python Output
+__pycache__
+
+# Ignore VS Code settings
+.vscode
+
+# Ignore pytest output
+.pytest_cache
+.coverage

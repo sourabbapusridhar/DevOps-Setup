@@ -1,3 +1,5 @@
+# Config file for running a simple "Hello World" program on Travis CI
+
 language: python
 
 python:
