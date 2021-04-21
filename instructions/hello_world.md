@@ -13,7 +13,7 @@
 * Click **Create repository.**
 
 ## Clone your fork locally
-* Run the following command in the command prompt:
+* Run the following command in the terminal:
 
 ```
 $ git clone https://USERNAME@github.com/USERNAME/travis-lab
@@ -23,13 +23,45 @@ $ cd travis-lab
 In the above text, replace `USERNAME` with your GitHub user name.
 
 ## Create a "Hello World" program
-* Create a short Python script named `hello.py` in your repository with the following content:
+* Create a Python file named `hello.py` in your repository with the following content:
 
 ```
-print("Hello World!")
+# Implementation of a simple "Hello World" program
+
+def hello_world():
+    """
+    Function to print "Hello World!"
+
+    Parameters
+    ----------
+    None
+
+    Returns
+    -------
+    None
+    """
+    print("Hello World!")
+
+
+def main():
+    """
+    Entry point for the script.
+
+    Parameters
+    ----------
+    None
+
+    Returns
+    -------
+    None
+    """
+    hello_world()
+
+if __name__ == "__main__":
+    main()
 ```
 
-* Test the script by running it once locally using command prompt:
+* Test the file by running it once locally using terminal:
 
 ```
 $ python hello.py
@@ -40,11 +72,11 @@ Hello World!
 
 ```
 $ git add hello.py
-$ git commit -m "Added Python Script."
+$ git commit -m "Added Python File."
 $ git push origin master
 ```
 
-* Visit your repository to confirm that your repository now contains the script `hello.py`.
+* Visit your repository to confirm that your repository now contains the file `hello.py`.
 
 ## Sign in to Travis CI
 * Since you already have a GitHub account, create a Travis CI account by visiting [Travis CI](https://travis-ci.com/) and selecting [Sign up with GitHub](https://travis-ci.com/signin).
@@ -52,9 +84,11 @@ $ git push origin master
 * Click on your profile picture in the top right of your Travis Dashboard, click Settings and then the green Activate button, and select the repositories you want to use with Travis CI.
 
 ## Create a `.travis.yml` job file
-* Add a `.travis.yml` file to your repository to tell Travis CI what to do. This file informs Travis CI on how to build and test your software. In addition, this file can also be used to specify any dependencies you need to install before building or testing your software. Create a `.travis.yml` file in your repository with the following content:
+* Add a `.travis.yml` file on the top level of your repository to tell Travis CI what to do. This file informs Travis CI on how to build and test your software. In addition, this file can also be used to specify any dependencies you need to install before building or testing your software. Create a `.travis.yml` file in your repository with the following content:
 
 ```
+# Config file for running a simple "Hello World" program with Travis CI
+
 language: python
 
 python:
@@ -64,7 +98,7 @@ script:
  - python hello.py
 ```
 
-The above file informs Travis CI to set up a Python 3.6 environment and run the `hello.py` script.
+The above file informs Travis CI to set up a Python 3.6 environment and run the `hello.py` file.
 
 * Add and commit the above new file to your repository and push the changes to GitHub to trigger a Travis CI build. Travis only runs builds on the commits you push after adding the `.travis.yml` file.
 

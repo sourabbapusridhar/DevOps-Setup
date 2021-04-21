@@ -5,7 +5,7 @@ import calculator
 
 def test_addition():
     """
-    Unittest to test addition function from  the "Calculator" program
+    Unit test to test addition function from  the "Calculator" program
     The unit test tests output for both positive and negative int and float inputs
 
     Parameters
@@ -23,7 +23,7 @@ def test_addition():
 
 def test_subtraction():
     """
-    Unittest to test subtraction function from  the "Calculator" program
+    Unit test to test subtraction function from  the "Calculator" program
     The unit test tests output for both positive and negative int and float inputs
 
     Parameters
@@ -41,7 +41,7 @@ def test_subtraction():
 
 def test_multiplication():
     """
-    Unittest to test multiplication function from  the "Calculator" program
+    Unit test to test multiplication function from  the "Calculator" program
     The unit test tests output for both positive and negative int and float inputs
 
     Parameters
@@ -59,7 +59,7 @@ def test_multiplication():
 
 def test_division():
     """
-    Unittest to test division function from  the "Calculator" program
+    Unit test to test division function from  the "Calculator" program
     The unit test tests output for both positive and negative int and float inputs
     The unit test also tests for ZeroDivisionError exception when divided by zero
 

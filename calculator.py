@@ -33,7 +33,7 @@ def subtract(x, y):
     Returns
     -------
     difference  : int/float
-                  Difference of the two numbers
+                  Difference between the two numbers
     """
     return (x - y)
 

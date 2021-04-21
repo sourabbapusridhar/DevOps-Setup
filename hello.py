@@ -1,4 +1,4 @@
-# Implementation of "Hello World" program
+# Implementation of a simple "Hello World" program
 
 def hello_world():
     """
