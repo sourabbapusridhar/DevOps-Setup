@@ -1,4 +1,4 @@
-# Config file to run and test a simple "Calculator" program in an Anaconda virtual environment with Travis CI
+# Config file to run and test a simple "Calculator" program in an Anaconda virtual environment and report code coverage in Codecov with Travis CI
 
 language: python
 

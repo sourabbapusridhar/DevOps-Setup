@@ -5,7 +5,7 @@
 The goal of this project is to build a DevOps pipeline with open source tools. Presently, the repository can run the following pipelines:
 
 1. Runs a simple "Hello World" program with Travis CI. [[Instructions](https://github.com/sourabbapusridhar/devops-setup/blob/master/instructions/hello_world.md)] [[YAML](https://github.com/sourabbapusridhar/devops-setup/blob/master/yaml/hello_world.travis.yml)]
-2. Run and test a simple "Calculator" program in an Anaconda virtual environment with Travis CI. [[Instructions](https://github.com/sourabbapusridhar/devops-setup/blob/master/instructions/calculator_conda_environment.md)] [[YAML](https://github.com/sourabbapusridhar/devops-setup/blob/master/yaml/calculator_conda_environment.travis.yml)]
+2. Run and test a simple "Calculator" program in an Anaconda virtual environment and report code coverage in Codecov with Travis CI. [[Instructions](https://github.com/sourabbapusridhar/devops-setup/blob/master/instructions/calculator_conda_environment.md)] [[YAML](https://github.com/sourabbapusridhar/devops-setup/blob/master/yaml/calculator_conda_environment.travis.yml)]
 
 ## Authors
 * Sourab Bapu Sridhar

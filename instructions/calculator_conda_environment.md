@@ -1,4 +1,4 @@
-# Travis CI to run and test a simple "Calculator" program in an Anaconda virtual environment
+# Travis CI to run and test a simple "Calculator" program in an Anaconda virtual environment and report code coverage in Codecov
 
 ## Sign in to GitHub
 * If you **do not** have an account, visit [GitHub](https://github.com/) and create a free account.
@@ -231,7 +231,7 @@ $ git push origin master
 * Add a `.travis.yml` file on the top level of your repository to tell Travis CI what to do. This file informs Travis CI on how to build and test your software. In addition, this file can also be used to specify any dependencies you need to install before building or testing your software. Create a `.travis.yml` file in your repository with the following content:
 
 ```
-# Config file to run and test a simple "Calculator" program in an Anaconda virtual environment with Travis CI
+# Config file to run and test a simple "Calculator" program in an Anaconda virtual environment and report code coverage in Codecov with Travis CI
 
 language: python
 
@@ -261,7 +261,7 @@ after_success:
  - bash <(curl -s https://codecov.io/bash)
 ```
 
-The above file informs Travis CI to install miniconda, set up an anconda virtual environment named `test-environment` based on Python 3.6 environment, install required packages, activate virtual environemnt, run unit tests on the `calculator.py` file, and report code coverage with [CodeCov](https://about.codecov.io/).
+The above file informs Travis CI to install miniconda, set up an anconda virtual environment named `test-environment` based on Python 3.6 environment, install required packages, activate virtual environemnt, run unit tests on the `calculator.py` file, and report code coverage with [Codecov](https://about.codecov.io/).
 
 * Add and commit the above new file to your repository and push the changes to GitHub to trigger a Travis CI build. Travis only runs builds on the commits you push after adding the `.travis.yml` file.
 
@@ -272,6 +272,33 @@ $ git push origin master
 ```
 
 * Check the build status page to see if your build passes or fails according to the build command's return status by visiting [Travis CI](https://travis-ci.com/) and selecting your repository.
+
+## Sign in to Codecov
+* Since you already have a GitHub account, create a Codecov account by visiting [Codecov](https://about.codecov.io/) and selecting [Sign up with GitHub](https://about.codecov.io/sign-up/).
+* Accept the Authorization of Codecov. You'll be redirected to GitHub.
+* Select the repositories you want to use with Codecov by clicking on **Add new repository** under the **Repositories** section.
+
+## Create a code coverage configuration file
+* Add a `.coveragerc` file on the top level of your repository to tell Codecov what to do. The settings in this file inform Codecov on how the code coverage should be measured, how the code coverage must be stored, and how the code coverage must be checked-in. Create a `.coveragerc` file in your repository with the following content:
+
+```
+# Configuration file for the code coverage tool
+
+[run]
+branch = True
+source = devops-setup
+
+[report]
+exclude_lines =
+    if __name__ == .__main__.:
+ignore_errors = True
+omit =
+    test_*
+    hello*
+```
+
+The above file informs Codecov about the sources to be measured, branches whose coverage need to be reported, lines that need to be excluded, and files that need to be omitted from the measurement.
+
 
 ## Add a `README.md` file with a build status icon
 * Each Travis CI job has an associated build status icon (e.g., [https://travis-ci.org/USERNAME/travis-lab.svg?branch=master](https://travis-ci.org/USERNAME/travis-lab.svg?branch=master)). The status icon can be embedded into the `README.md` file in a Git repository so that the current status of the build is always visible on viewing the Git repository via GitHub's web interface. To add the build status icon, add the following content in the `README.md` file:
@@ -292,5 +319,24 @@ $ git commit -m "Added Travis CI build status icon to README."
 $ git push origin master
 ```
 
+## Add a `README.md` file with a code coverage status icon
+* Each Codecov job has an associated code coverage status icon. The status icon can be embedded into the `README.md` file in a Git repository so that the current status of the code coverage is always visible on viewing the Git repository via GitHub's web interface. To add the code coverage status icon, select the repository in the Codecov dashboard, visit the Badge subsection under the Settings section, copy the link to the Markdown badge, and paste the link in the `README.md` file as follows:
+
+```
+# README for Codecov
+
+[![codecov](https://codecov.io/gh/USERNAME/travis-lab/branch/master/graph/badge.svg?token=TOKEN)](https://codecov.io/gh/USERNAME/travis-lab)
+```
+
+The above text is a MarkDown syntax that specifies a hyperlink to [https://codecov.io/gh/USERNAME/travis-lab](https://codecov.io/gh/USERNAME/travis-lab) that is rendered as an SVG image, whose source is at [https://codecov.io/gh/USERNAME/travis-lab/branch/master/graph/badge.svg?token=TOKEN](https://codecov.io/gh/USERNAME/travis-lab/branch/master/graph/badge.svg?token=TOKEN). Here the `TOKEN` is an unique identifier that is assigned to your repository by Codecov.
+
+* Add and commit the above changes to your repository and push the changes to GitHub to trigger a new Codecov measurement. 
+
+```
+$ git add README.md
+$ git commit -m "Added Codecov code coverage status icon to README."
+$ git push origin master
+```
+
 ## Acknowledgments
-The instructions in this document are modified from [Travis CI Docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/use-conda-with-travis-ci.html).
+The instructions in this document are modified from [Travis CI Docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/use-conda-with-travis-ci.html) and [Codecov Quick Start Guide](https://docs.codecov.io/docs/quick-start).
