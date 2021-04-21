@@ -252,12 +252,16 @@ before_script:
  - conda activate test-environment
  - pip install pytest
  - pip install pytest-cov
+ - pip install coverage
 
 script:
- - pytest -v test_calculator.py --cov=calculator
+ - pytest -v test_calculator.py --cov=./
+
+after_success:
+ - bash <(curl -s https://codecov.io/bash)
 ```
 
-The above file informs Travis CI to install miniconda, set up an anconda virtual environment named `test-environment` based on Python 3.6 environment, install required packages, activate virtual environemnt and run unit tests and test coverage on the `calculator.py` file.
+The above file informs Travis CI to install miniconda, set up an anconda virtual environment named `test-environment` based on Python 3.6 environment, install required packages, activate virtual environemnt, run unit tests on the `calculator.py` file, and report code coverage with [CodeCov](https://about.codecov.io/).
 
 * Add and commit the above new file to your repository and push the changes to GitHub to trigger a Travis CI build. Travis only runs builds on the commits you push after adding the `.travis.yml` file.
 

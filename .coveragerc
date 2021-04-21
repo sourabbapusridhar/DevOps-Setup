@@ -1,0 +1,13 @@
+# Configuration file for the code coverage tool
+
+[run]
+branch = True
+source = devops-setup
+
+[report]
+exclude_lines =
+    if __name__ == .__main__.:
+ignore_errors = True
+omit =
+    test_*
+    hello

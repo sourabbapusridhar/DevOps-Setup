@@ -1,6 +1,6 @@
 # DevOps Setup
 
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Build Status](https://www.travis-ci.com/sourabbapusridhar/devops-setup.svg?branch=master)](https://www.travis-ci.com/sourabbapusridhar)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Build Status](https://www.travis-ci.com/sourabbapusridhar/devops-setup.svg?branch=master)](https://www.travis-ci.com/sourabbapusridhar) [![Code Coverage](https://codecov.io/gh/sourabbapusridhar/devops-setup/branch/master/graph/badge.svg?token=OFA5MBXZ0B)](https://codecov.io/gh/sourabbapusridhar/devops-setup)
 
 The goal of this project is to build a DevOps pipeline with open source tools. Presently, the repository can run the following pipelines:
 

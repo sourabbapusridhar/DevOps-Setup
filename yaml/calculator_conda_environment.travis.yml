@@ -19,6 +19,10 @@ before_script:
  - conda activate test-environment
  - pip install pytest
  - pip install pytest-cov
+ - pip install coverage
 
 script:
- - pytest -v test_calculator.py --cov=calculator
+ - pytest -v test_calculator.py --cov=./
+
+after_success:
+ - bash <(curl -s https://codecov.io/bash)
